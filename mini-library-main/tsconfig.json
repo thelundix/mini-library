@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "ESNext",
+        "removeComments": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "./docs/js"
+    },
+    "include": [
+        "./src"
+    ]
+} 
