@@ -1,0 +1,129 @@
+#books-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative; /* This is needed for absolute positioning of child elements */
+  overflow: hidden; /* This prevents the h1 text from overflowing the container */
+}
+
+#book-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.book {
+  width: 120px; /* Fixed width for square shape */
+  height: 180px; /* Fixed height for square shape */
+  border: none; /* Removing border for a cleaner look */
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8; /* Light background for each book */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center;
+  overflow: hidden; /* Prevents overflow of text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.book-title {
+  font-size: 10px; /* Smaller font size */
+  font-weight: bold;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncates longer text with ellipsis */
+  color: #2c3e50; /* Darker shade for contrast */
+}
+
+.book-details {
+  font-size: 10px; /* Even smaller font size */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncates longer text with ellipsis */
+  color: #34495e; /* Slightly lighter shade for variety */
+}
+
+/* Optional: Adding a hover effect */
+.book:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover for emphasis */
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px; /* Adjust width as needed */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center; /* Aligns container vertically */
+  justify-content: center; /* Aligns container horizontally */
+  background-color: #e0e0e0;
+  font-family: "Arial", sans-serif; /* Professional font choice */
+}
+
+h1 {
+  position: absolute; /* This takes the h1 out of the normal flow and positions it relative to the nearest positioned ancestor */
+  top: 0; /* Positions the h1 at the top of the container */
+  right: 0; /* Positions the h1 at the right of the container */
+  color: white;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 0.2rem;
+  font-size: 80px;
+  z-index: 1;
+  padding: 2rem;    
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 650px) {
+    h1 {
+      font-size: 50px; /* Adjust the font size for smaller screens */
+      top: 0;
+    }
+  }
+
+p {
+  font-size: 13px;
+  color: #2c3e50; /* Consistent text color */
+}
+h3 {
+  font-size: 15px;
+  color: #34495e; /* Consistent heading color */
+}
