@@ -103,10 +103,10 @@ h1 {
   position: absolute; /* This takes the h1 out of the normal flow and positions it relative to the nearest positioned ancestor */
   top: 0; /* Positions the h1 at the top of the container */
   right: 0; /* Positions the h1 at the right of the container */
-  color: white;
+  color: Light Grey;
   font-family: "Roboto Mono", monospace;
   letter-spacing: 0.2rem;
-  font-size: 50px;
+  font-size: 40px;
   z-index: 1;
   padding: 2rem;    
   transform: translateY(-50%);
@@ -114,7 +114,7 @@ h1 {
 
 @media screen and (max-width: 650px) {
     h1 {
-      font-size: 30px; /* Adjust the font size for smaller screens */
+      font-size: 10px; /* Adjust the font size for smaller screens */
       top: 0;
     }
   }
